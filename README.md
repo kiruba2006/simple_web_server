@@ -21,7 +21,7 @@ Serving the HTML pages.
 Testing the webserver.
 
 # PROGROM:
-
+```
     import http.server
     import socketserver
 
@@ -32,15 +32,15 @@ Testing the webserver.
             self.send_response(200)
             self.send_header("Content-type", "text/html")
             self.end_headers()
-            self.wfile.write(b"<html><body><h1>Hi Hello</h1></body></html>")
+            self.wfile.write(b"<html><body><h1>Kiru</h1></body></html>")
 
     with socketserver.TCPServer(("", PORT), MyHandler) as httpd:
         print(f"Serving at port {PORT}")
         httpd.serve_forever()
-
+```
 # OUTPUT:
+![alt text](image-2.png)
 
-![alt text](image-1.png)
 
 # RESULT:
 The program for implementing simple webserver is executed successfully.
